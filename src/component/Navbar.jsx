@@ -4,7 +4,7 @@ import { setSearch } from "../redux/slices/SearchSlice";
 import { logoutUser } from "../redux/slices/AuthSlice";
 import { useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/slices/CartSlice";
-
+// import images from '/public/images.jpg';
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -19,15 +19,22 @@ const Navbar = () => {
     dispatch(clearCart());
     navigate("/");
   };
- 
+
   console.log("user details from navbar", username);
   return (
     <nav class="flex flex-col lg:flex-row justify-between py-3 mx-6 mb-10">
       <div>
-        <h3 className="text-xl font-bold text-gray-600">
+        <h2 className="text-xl font-bold text-gray-600">
           {new Date().toUTCString().slice(0, 16)}
-        </h3>
-        <h1 className="text-2xl font-bold">Food Plaza</h1>
+        </h2>
+     <span className="flex flex-row gap-1">
+        <img
+          className="w-[60px] h-[60px] object-cover"
+          src="images.png"
+          alt="loading.."
+        />
+        <h1 className="text-2xl font-bold text-gray-800">Food Plaza</h1>
+        </span>
       </div>
       <div className="px-12">
         <input
@@ -59,7 +66,7 @@ const Navbar = () => {
         <div className="relative right-12 -top-3">
           <button
             onClick={handleLoginClick}
-            className="w-[90px] h-[30px] cursor-pointer mx-16 mr-1 p-1 mb-10 my-4 bg-gray-600 text-white font-bold rounded-md hover:bg-green-600 hover:text-white "
+            className="w-[90px] h-[30px] cursor-pointer mx-16 mr-1 p-1 mb-10 my-4 bg-green-400 text-white font-bold rounded-md hover:bg-green-600 hover:text-white "
           >
             Login
           </button>

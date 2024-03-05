@@ -30,7 +30,6 @@ const SignUp = () => {
           uid: user.uid,
           username: user.displayName,
           email: user.email,
-          username: user.username,
         })
       );
       navigate("/");
@@ -42,9 +41,16 @@ const SignUp = () => {
   return (
     <div className="flex items-center justify-center h-screen ">
       <div className="">
-        <div className="relative top-0 right-100 text-black shadow-md rounded-md px-8 pt-6 pb-12 mb-6   flex flex-col gap-1 w-[300px] h-[360px] bg-gray-300">
-          <h2 className="relative left-20">Sign Up</h2>
-          <div className="relative top-4">
+        <div className="relative top-0 right-100 text-black shadow-md rounded-md px-8 pt-6 pb-12 mb-6   flex flex-col gap-1 w-[300px] h-[360px] bg-gray-400">
+          <span>
+            <img
+              className="w-[60px] h-[60px] object-cover"
+              src="images.png"
+              alt="loading..."
+            />
+            <h2 className="relative left-20 -top-16">Sign Up</h2>
+          </span>
+          <div className="relative -top-6">
             <input
               onChange={(e) => setEmail(e.target.value)}
               type="email"
@@ -53,7 +59,7 @@ const SignUp = () => {
               className="rounded-sm my-3 pt-2 h-[21px] w-[100%]"
             />
           </div>
-          <div className="relative top-4">
+          <div className="relative -top-6">
             <input
               onChange={(e) => setUsername(e.target.value)}
               type="email"
@@ -62,7 +68,7 @@ const SignUp = () => {
               className="rounded-sm my-3 pt-2 h-[21px] w-[100%] "
             />
           </div>
-          <div className="relative top-4">
+          <div className="relative -top-6">
             <input
               onChange={(e) => setPassword(e.target.value)}
               type="password"
@@ -71,7 +77,7 @@ const SignUp = () => {
               className="rounded-sm my-4 pt-2 h-[21px] w-[100%] "
             />
           </div>
-          <div className="relative top-6 left-6">
+          <div className="relative -top-7 left-6">
             <button
               onClick={handleSignUp}
               className="w-[90px] cursor-pointer mx-16 mr-1 p-1  mt-16px mb-8px text-blue-800 font-semibold rounded-sm  hover:bg-green-600 hover:text-white  hover:scale-150 transition-transform duration-500 ease-in-out"

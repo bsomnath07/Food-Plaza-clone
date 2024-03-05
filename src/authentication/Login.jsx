@@ -36,9 +36,15 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center h-screen  shadow-3xl rounded-xl ">
       <div className=" ">
-        
-        <div className="relative top-0 right-100  text-black shadow-md rounded-md px-8 pt-6 pb-12 mb-6 flex flex-col  w-[300px] h-[360px] bg-gray-300 ">
-          <h2 className="relative left-24 -top-2">Log In</h2>
+        <div className="relative top-0 right-100  text-black shadow-md rounded-md px-8 pt-6 pb-12 mb-6 flex flex-col  w-[300px] h-[360px] bg-gray-400 ">
+          <span>
+            <img
+              className="w-[60px] h-[60px] object-cover"
+              src="images.png"
+              alt="loading..."
+            />
+            <h2 className="relative left-24 -top-16">Log In</h2>
+          </span>
           <div className="relative -top-2 ">
             <input
               onChange={(e) => setEmail(e.target.value)}
