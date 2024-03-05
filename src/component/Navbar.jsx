@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "../redux/slices/SearchSlice";
-import { logoutUser, signupUser } from "../redux/slices/AuthSlice";
+import { logoutUser } from "../redux/slices/AuthSlice";
 import { useNavigate } from "react-router-dom";
 import { clearCart } from "../redux/slices/CartSlice";
 
